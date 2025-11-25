@@ -3,38 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Group UI Anime</title>
+<title>Group Anime UI</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <div class="profile">
-        <img src="https://via.placeholder.com/120" class="avatar">
-        <h1>Nama Group</h1>
-        <p>Deskripsi singkat mengenai group / komunitas sekolah.</p>
-        <a href="#" class="btn">Akun TikTok</a>
 
-        <div class="stats">
-            <div class="card"><b>350</b><span>Total Member</span></div>
-            <div class="card"><b>6</b><span>Total Admin</span></div>
+<div class="container">
+
+    <!-- LOGO -->
+    <div class="logo"></div>
+
+    <!-- Nama & Deskripsi -->
+    <h1 class="group-name">Nama Group</h1>
+    <p class="group-desc">
+        Deskripsi singkat mengenai group sekolah atau komunitas.
+    </p>
+
+    <!-- Tombol TikTok -->
+    <button class="tiktok-btn" onclick="openTikTok(); spawnFlowers(event)">
+        Akun TikTok
+    </button>
+
+    <!-- DATA MEMBER & ADMIN -->
+    <div class="stats">
+        <div class="stat-box" onclick="spawnFlowers(event)">
+            <p>Total Member</p>
+            <h2 id="member-count">350</h2>
+        </div>
+
+        <div class="stat-box" onclick="spawnFlowers(event)">
+            <p>Total Admin</p>
+            <h2 id="admin-count">6</h2>
         </div>
     </div>
 
-    <h2 class="center">Struktur Jabatan</h2>
+    <!-- STRUKTUR JABATAN -->
+    <h2 class="title">Struktur Jabatan</h2>
+
     <div class="tree">
-        <div class="node owner">Pemilik Group</div>
-        <div class="row">
-            <div class="node">Admin 1</div>
-            <div class="node">Admin 2</div>
+
+        <!-- Pemilik -->
+        <div class="node owner" onclick="spawnFlowers(event)">
+            <div class="pfp"></div>
+            <p>Pemilik Group</p>
         </div>
+
+        <div class="line vertical"></div>
+
+        <!-- Admin 1 & 2 -->
         <div class="row">
-            <div class="node">Admin 3</div>
-            <div class="node">Admin 4</div>
-            <div class="node">Admin 5</div>
-            <div class="node">Admin 6</div>
+            <div class="node" onclick="spawnFlowers(event)">
+                <div class="pfp"></div>
+                <p>Admin 1</p>
+            </div>
+            <div class="node" onclick="spawnFlowers(event)">
+                <div class="pfp"></div>
+                <p>Admin 2</p>
+            </div>
         </div>
+
+        <!-- Garis panjang -->
+        <div class="line horizontal"></div>
+
+        <!-- Admin 3–6 -->
+        <div class="row bottom">
+            <div class="node" onclick="spawnFlowers(event)">
+                <div class="pfp"></div>
+                <p>Admin 3</p>
+            </div>
+            <div class="node" onclick="spawnFlowers(event)">
+                <div class="pfp"></div>
+                <p>Admin 4</p>
+            </div>
+            <div class="node" onclick="spawnFlowers(event)">
+                <div class="pfp"></div>
+                <p>Admin 5</p>
+            </div>
+            <div class="node" onclick="spawnFlowers(event)">
+                <div class="pfp"></div>
+                <p>Admin 6</p>
+            </div>
+        </div>
+
     </div>
 </div>
+
+
+<!-- Canvas untuk Partikel Bunga -->
+<canvas id="flowerCanvas"></canvas>
 
 <script src="script.js"></script>
 </body>
