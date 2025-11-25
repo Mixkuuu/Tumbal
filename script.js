@@ -1,17 +1,47 @@
-// particle click effect
-document.addEventListener("click", e=>{
-    for(let i=0;i<10;i++){
-        const p=document.createElement("span");
-        p.className="particle";
-        p.style.left=e.clientX+"px";
-        p.style.top=e.clientY+"px";
-        document.body.appendChild(p);
+function openTikTok() {
+    window.open("https://www.tiktok.com/@username_group", "_blank");
+}
 
-        const angle=Math.random()*2*Math.PI;
-        const distance=Math.random()*80+20;
-        p.style.setProperty("--x",Math.cos(angle)*distance+"px");
-        p.style.setProperty("--y",Math.sin(angle)*distance+"px");
+/* Partikel Bunga */
+const canvas = document.getElementById("flowerCanvas");
+const ctx = canvas.getContext("2d");
 
-        setTimeout(()=>p.remove(),600);
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
+let flowers = [];
+
+function spawnFlowers(e) {
+    for (let i = 0; i < 15; i++) {
+        flowers.push({
+            x: e.clientX,
+            y: e.clientY,
+            size: Math.random() * 8 + 4,
+            speedX: (Math.random() - 0.5) * 2,
+            speedY: (Math.random() - 0.5) * 2,
+            alpha: 1
+        });
     }
-});
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    flowers.forEach((f, i) => {
+        f.x += f.speedX;
+        f.y += f.speedY;
+        f.alpha -= 0.015;
+
+        ctx.globalAlpha = f.alpha;
+        ctx.fillStyle = "#ffb7e3";
+        ctx.beginPath();
+        ctx.arc(f.x, f.y, f.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (f.alpha <= 0) flowers.splice(i, 1);
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
