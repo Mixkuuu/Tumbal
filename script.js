@@ -1,5 +1,5 @@
 // =============================
-// POPUP FUNCTION
+// POPUP
 // =============================
 function openPopup(title, nama, waifu, tt, status) {
     document.getElementById("popup-title").innerText = title;
@@ -16,9 +16,8 @@ function closePopup() {
 }
 
 
-
 // =============================
-// BUNGA PARTIKEL SAAT KLIK UI
+// PARTIKEL BUNGA
 // =============================
 document.querySelectorAll(".btn-click").forEach(btn => {
     btn.addEventListener("click", function (e) {
