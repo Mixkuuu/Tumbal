@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group Anime Website</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER GROUP -->
+    <div class="group-header">
+        <img src="logo.png" class="group-logo" alt="Group Logo">
+
+        <h1 class="group-name">Nama Group Kamu</h1>
+
+        <p class="group-desc">
+            Deskripsi singkat tentang group kamu agar terlihat estetik, rapi dan modern ala anime.
+        </p>
+
+        <a href="https://www.tiktok.com" class="tiktok-btn btn-click">TikTok Group</a>
+
+        <div class="stats-container">
+            <div class="stat-card btn-click">
+                <h3>Member</h3>
+                <span>124</span>
+            </div>
+
+            <div class="stat-card btn-click">
+                <h3>Admin</h3>
+                <span>6</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JABATAN SECTION -->
+    <section class="jabatan-section">
+
+        <h2 class="section-title">Struktur Jabatan</h2>
+
+        <!-- OWNER -->
+        <div class="owner-box anime-card"
+             onclick="openPopup('Pemilik Group','Namamu','Waifu/Husbu kamu','Akun TikTokmu','Pemilik')">
+
+            <img src="owner.png" class="pp-owner">
+            <h3 class="owner-name">Pemilik Group</h3>
+        </div>
+
+        <!-- TREE STRUCTURE -->
+        <div class="tree">
+            <div class="branch"></div>
+
+            <div class="admin-row">
+
+                <div class="admin-card anime-card"
+                     onclick="openPopup('Admin 1','Nama Admin 1','Waifu/Husbu','TikTok Admin 1','Admin')">
+                    <img src="admin1.png">
+                    <p>Admin 1</p>
+                </div>
+
+                <div class="admin-card anime-card"
+                     onclick="openPopup('Admin 2','Nama Admin 2','Waifu/Husbu','TikTok Admin 2','Admin')">
+                    <img src="admin2.png">
+                    <p>Admin 2</p>
+                </div>
+
+                <div class="admin-card anime-card"
+                     onclick="openPopup('Admin 3','Nama Admin 3','Waifu/Husbu','TikTok Admin 3','Admin')">
+                    <img src="admin3.png">
+                    <p>Admin 3</p>
+                </div>
+
+                <div class="admin-card anime-card"
+                     onclick="openPopup('Admin 4','Nama Admin 4','Waifu/Husbu','TikTok Admin 4','Admin')">
+                    <img src="admin4.png">
+                    <p>Admin 4</p>
+                </div>
+
+                <div class="admin-card anime-card"
+                     onclick="openPopup('Admin 5','Nama Admin 5','Waifu/Husbu','TikTok Admin 5','Admin')">
+                    <img src="admin5.png">
+                    <p>Admin 5</p>
+                </div>
+
+                <div class="admin-card anime-card"
+                     onclick="openPopup('Admin 6','Nama Admin 6','Waifu/Husbu','TikTok Admin 6','Admin')">
+                    <img src="admin6.png">
+                    <p>Admin 6</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- WATERMARK -->
+    <footer class="watermark">
+        © 2025 • Website Group Anime • By Tuan Mixku
+    </footer>
+
+
+    <!-- POPUP (WAJIB DI PALING BAWAH, DI LUAR SEMUA ELEMEN) -->
+    <div class="popup-bg" id="popup-bg">
+        <div class="popup-box">
+            <h3 class="popup-title" id="popup-title"></h3>
+
+            <p><b>Nama :</b> <span id="pp-nama"></span></p>
+            <p><b>Waifu/Husbu :</b> <span id="pp-waifu"></span></p>
+            <p><b>Akun TikTok :</b> <span id="pp-tt"></span></p>
+            <p><b>Status :</b> <span id="pp-status"></span></p>
+
+            <button class="close-btn" onclick="closePopup()">Tutup</button>
+        </div>
+    </div>
+
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
