@@ -1,209 +1,247 @@
-body {
+/* =============================== */
+/* GLOBAL STYLE */
+/* =============================== */
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, #ffe5f2, #ffd8e8, #ffcce0);
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-/* HEADER */
-.group-header {
+body {
+    background: linear-gradient(135deg, #ffd6e8, #ffeef7);
+    color: #333;
     text-align: center;
-    padding: 40px 20px;
+}
+
+/* =============================== */
+/* HEADER */
+/* =============================== */
+.group-header {
+    padding: 30px 15px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 0 0 20px 20px;
 }
 
 .group-logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    margin: 0 auto;
-    border: 4px solid #ff9ecd;
-    box-shadow: 0 0 25px #ff9ecd80;
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .group-name {
-    margin-top: 15px;
-    font-size: 32px;
-    color: #ff4da6;
-    text-shadow: 0 0 10px #ff7ac680;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .group-desc {
-    width: 80%;
-    margin: 10px auto;
-    font-size: 14px;
-    color: #c74380;
-    opacity: .8;
+    font-size: 15px;
+    opacity: 0.8;
+    margin-bottom: 15px;
 }
 
-/* BUTTON TIKTOK */
 .tiktok-btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #ff4da6;
-    color: white;
-    font-weight: bold;
+    padding: 10px 18px;
+    background: #ff3cac;
+    color: #fff;
+    border-radius: 12px;
     text-decoration: none;
-    border-radius: 30px;
-    box-shadow: 0 0 15px #ff4da680;
-    transition: .3s;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(255,0,180,0.3);
 }
-.tiktok-btn:hover { transform: scale(1.05); }
 
-/* MEMBER & ADMIN */
+/* =============================== */
+/* MEMBER & ADMIN COUNT */
+/* =============================== */
 .stats-container {
-    margin-top: 25px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 .stat-card {
-    width: 150px;
-    padding: 12px;
-    background: white;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 0 15px #ff9ac880;
-    cursor: pointer;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
-/* JABATAN */
+.stat-card h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.stat-card span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff4faf;
+}
+
+/* =============================== */
+/* JABATAN SECTION */
+/* =============================== */
 .jabatan-section {
-    margin-top: 50px;
-    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
 }
 
 .section-title {
-    font-size: 28px;
-    color: #ff4da6;
-    text-shadow: 0 0 10px #ff7ac680;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-/* OWNER */
+/* Owner Box */
 .owner-box {
-    margin: 20px auto;
-    padding: 20px;
     width: 200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(255,0,119,0.25);
+    cursor: pointer;
 }
 
 .pp-owner {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid #ff4da6;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-/* TREE */
-.tree { margin-top: 20px; }
+.owner-name {
+    font-weight: 700;
+}
+
+/* Tree structure */
+.tree {
+    margin-top: 40px;
+}
 
 .branch {
-    width: 3px;
+    width: 4px;
     height: 40px;
-    background: #ff4da6;
+    background: #ff73b9;
     margin: 0 auto;
+    border-radius: 4px;
 }
 
 .admin-row {
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 18px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* ADMIN CARD */
 .admin-card {
-    width: 120px;
-    padding: 10px;
-    border-radius: 20px;
-    background: white;
-    box-shadow: 0 0 15px #ff90c280;
+    width: 130px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(255,0,119,0.25);
+    transition: transform 0.2s;
 }
 
 .admin-card img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 3px solid #ff4da6;
+    width: 100%;
+    border-radius: 10px;
 }
 
-/* ANIME SHADOW */
-.anime-card {
-    transition: .3s;
-}
-.anime-card:hover {
+.admin-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px #ff4da680;
 }
 
-/* WATERMARK */
-.watermark {
-    text-align: center;
-    padding: 20px;
-    color: #d164a0;
-    margin-top: 50px;
-    font-size: 13px;
-}
-
+/* =============================== */
 /* POPUP */
+/* =============================== */
 .popup-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: #00000080;
-    backdrop-filter: blur(4px);
-    display: none;
+    height: 100vh;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(2px);
+    display: none; 
     justify-content: center;
     align-items: center;
-    z-index: 999999;
+    z-index: 999;
 }
 
 .popup-box {
-    width: 80%;
+    width: 85%;
     max-width: 350px;
-    background: white;
-    border-radius: 20px;
+    background: #fff;
     padding: 20px;
-    box-shadow: 0 0 25px #ff7ac6;
-    animation: pop .3s ease-out;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(255,0,140,0.3);
+    animation: popupShow 0.25s ease;
 }
-@keyframes pop {
-    from { transform: scale(.6); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+
+.popup-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .close-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #ff4fa8;
     border: none;
-    background: #ff4da6;
-    color: white;
-    border-radius: 15px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
 }
 
-/* ★ Particle Sakura */
+/* Pop-up Animation */
+@keyframes popupShow {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =============================== */
+/* WATERMARK */
+/* =============================== */
+.watermark {
+    margin-top: 50px;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #ff4fa8;
+    opacity: 0.7;
+}
+
+/* =============================== */
+/* PARTICLE EFEK CLICK */
+/* =============================== */
 .particle {
     position: fixed;
-    width: 12px;
-    height: 12px;
-    background: pink;
-    clip-path: polygon(50% 0%, 60% 25%, 100% 35%, 70% 55%, 80% 100%, 50% 75%, 20% 100%, 30% 55%, 0% 35%, 40% 25%);
-    opacity: 0.9;
-    animation: fly 0.9s ease-out forwards;
+    width: 8px;
+    height: 8px;
+    background: #ff4fa8;
+    border-radius: 50%;
+    animation: particleFly 0.9s linear forwards;
     pointer-events: none;
-    filter: drop-shadow(0 0 6px #ff69b4);
 }
-@keyframes fly {
-    100% {
-        transform: translate(var(--x), var(--y)) rotate(360deg);
+
+@keyframes particleFly {
+    to {
+        transform: translate(var(--x), var(--y));
         opacity: 0;
     }
 }
