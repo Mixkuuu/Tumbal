@@ -82,3 +82,34 @@ document.querySelectorAll('.btn-click').forEach(btn=>{
     layer.style.transform = `translateY(${y*0.12}px)`;
   }, {passive:true});
 })();
+
+function openPopup(jabatan, nama, waifu, tiktok, status) {
+
+    // Title + data
+    document.getElementById("popup-title").innerText = jabatan;
+    document.getElementById("pp-nama").innerText = nama;
+    document.getElementById("pp-waifu").innerText = waifu;
+    document.getElementById("pp-tt").innerText = tiktok;
+    document.getElementById("pp-status").innerText = status;
+
+    // Auto ganti gambar karakter anime sesuai jabatan
+    let img = "assets/character-placeholder.png";
+
+    if (jabatan === "Pemilik Group") img = "characters/owner.png";
+    if (jabatan === "Admin 1") img = "characters/admin1.png";
+    if (jabatan === "Admin 2") img = "characters/admin2.png";
+    if (jabatan === "Admin 3") img = "characters/admin3.png";
+    if (jabatan === "Admin 4") img = "characters/admin4.png";
+    if (jabatan === "Admin 5") img = "characters/admin5.png";
+    if (jabatan === "Admin 6") img = "characters/admin6.png";
+    if (jabatan === "Admin 7") img = "characters/admin7.png";
+
+    document.getElementById("popup-character-img").src = img;
+
+    // Show popup
+    document.getElementById("popup-bg").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup-bg").style.display = "none";
+}
