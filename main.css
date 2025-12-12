@@ -1,4 +1,121 @@
 /* ---------------------------------------------------
+   GLOBAL STYLE
+--------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url("Background 2.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* ---------------------------------------------------
+   PARALLAX BACKGROUND
+--------------------------------------------------- */
+.parallax-layer{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('assets/bg.webp') center/cover;
+    filter: brightness(0.4);
+    z-index: -10;
+    animation: parallaxMove 40s linear infinite;
+}
+
+@keyframes parallaxMove{
+    0%{ background-position: 0 0; }
+    100%{ background-position: 0 600px; }
+}
+
+/* ---------------------------------------------------
+   HEADER
+--------------------------------------------------- */
+.group-header{
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.group-logo{
+    width: 120px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #ff6ec7;
+}
+
+.group-name{
+    font-size: 35px;
+    margin-top: 20px;
+    color: #ff92d4;
+    text-shadow: 0 0 10px #ff6ec7;
+}
+
+.group-desc{
+    opacity: .8;
+    margin-top: 8px;
+    color: #fff;
+}
+
+.tiktok-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #ff70d6;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+    box-shadow: 0 0 20px #ff61c9;
+}
+.tiktok-btn:hover{
+    transform: scale(1.08);
+}
+
+/* ---------------------------------------------------
+   STATISTICS
+--------------------------------------------------- */
+.stats-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.stat-card{
+    width: 120px;
+    padding: 15px 0;
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 18px #ff93d9;
+    cursor: pointer;
+    transition: .3s;
+}
+.stat-card:hover{ transform: scale(1.1); }
+
+.stat-card span{
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffe3f7;
+}
+
+/* ---------------------------------------------------
+   SECTION TITLE
+--------------------------------------------------- */
+.section-title{
+    font-size: 28px;
+    text-align: center;
+    margin: 40px 0 25px;
+    color: #fff;
+    text-shadow: 0 0 10px #ff77e1;
+}
+
+/* ---------------------------------------------------
    OWNER CARD
 --------------------------------------------------- */
 .owner-box{
@@ -7,9 +124,7 @@
     margin: 0 auto;
     text-align: center;
     border-radius: 25px;
-    /* Hanya background-image + blur, tanpa overlay gelap */
-    background: url('Background2.jpg') center/cover no-repeat;
-    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.13);
     box-shadow: 0 0 20px #ff80df;
     cursor: pointer;
     transition: .3s;
@@ -28,16 +143,6 @@
     color: #fff;
 }
 
-/* Label informasi jabatan */
-.owner-box .jabatan-label{
-    display: block;
-    margin-top: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffea00 !important; /* kuning terang agar terlihat */
-    z-index: 1;
-}
-
 /* ---------------------------------------------------
    ADMIN CARDS
 --------------------------------------------------- */
@@ -52,9 +157,7 @@
 .admin-card{
     width: 170px;
     padding: 15px;
-    /* Hanya background-image + blur, tanpa overlay gelap */
-    background: url('Background2.jpg') center/cover no-repeat;
-    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.1);
     border-radius: 22px;
     text-align: center;
     box-shadow: 0 0 15px #ff70d6;
@@ -78,12 +181,134 @@
     color: #fff;
 }
 
-/* Label informasi jabatan */
-.admin-card .jabatan-label{
-    display: block;
-    margin-top: 6px;
+/* ---------------------------------------------------
+   POPUP
+--------------------------------------------------- */
+.popup-bg{
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,.65);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-box{
+    width: 90%;
+    max-width: 420px;
+    background: #1a1a1a;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 0 30px #ff73cf;
+    animation: fadeUp .35s ease;
+}
+
+@keyframes fadeUp{
+    from{ opacity: 0; transform: translateY(30px); }
+    to{ opacity: 1; transform: translateY(0); }
+}
+
+.popup-close{
+    float: right;
+    background: none;
+    border: none;
+    font-size: 23px;
+    color: white;
+    cursor: pointer;
+}
+
+.popup-inner{
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.popup-character img{
+    width: 140px;
+    filter: drop-shadow(0 0 10px #ff87df);
+}
+
+.popup-info p{
+    margin-top: 5px;
     font-size: 14px;
-    font-weight: 600;
-    color: #ffea00 !important;
-    z-index: 1;
+    color: #fff;
+}
+
+/* Footer button */
+.close-btn{
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    background: #ff78da;
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+.close-btn:hover{
+    background: #ff54cd;
+}
+
+/* ---------------------------------------------------
+   WATERMARK
+--------------------------------------------------- */
+.watermark{
+    text-align: center;
+    opacity: .6;
+    margin: 40px 0;
+    color: white;
+}
+
+/* ---------------------------------------------------
+   CLICK EFFECT
+--------------------------------------------------- */
+.click-effect{
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background: url('assets/flower.png');
+    background-size: cover;
+    pointer-events: none;
+    animation: pop .8s ease-out forwards;
+}
+
+@keyframes pop{
+    0%{ transform: scale(0.2) rotate(0deg); opacity: 1; }
+    100%{ transform: scale(1.5) rotate(180deg); opacity: 0; }
+}
+
+/* ---------------------------------------------------
+   SAKURA FALL
+--------------------------------------------------- */
+.sakura{
+    position: fixed;
+    top: -20px;
+    width: 22px;
+    height: 22px;
+    background: url("assets/sakura.png");
+    background-size: cover;
+    opacity: 0.9;
+    animation: sakuraFall linear infinite;
+}
+
+@keyframes sakuraFall{
+    0%{ transform: translateY(0) translateX(0); }
+    100%{ transform: translateY(120vh) translateX(40px); }
+}
+
+/* ---------------------------------------------------
+   FIX ALL TEXT COLOR ISSUE
+--------------------------------------------------- */
+label,
+.admin-card p,
+.owner-name,
+.popup-info p,
+.stat-card span,
+.group-desc {
+    color: #ffffff !important;
 }
