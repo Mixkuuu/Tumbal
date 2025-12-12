@@ -326,3 +326,17 @@ label,
 .group-desc {
     color: #ffffff !important;
 }
+
+/* ---------------------------------------------------
+   FIX WARNA TEKS DI BOX ADMIN, OWNER, DAN POPUP
+--------------------------------------------------- */
+.owner-box *,
+.admin-card *,
+.popup-box *,
+.popup-inner *,
+.popup-info *,
+.popup-info p,
+.popup-info b,
+.popup-info strong {
+    color: #ffffff !important;
+}
