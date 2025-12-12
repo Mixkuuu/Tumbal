@@ -1,4 +1,137 @@
 /* ---------------------------------------------------
+   GLOBAL STYLE
+--------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    /* Background utama */
+    background: url("Background2.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+/* Dark overlay halus (bisa dikurangi opacity supaya background terlihat) */
+body::before{
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.15); /* dikurangi dari 0.35 jadi 0.15 */
+    z-index: -1;
+}
+
+/* Blur container */
+.main-container {
+    backdrop-filter: blur(6px);
+}
+
+/* ---------------------------------------------------
+   PARALLAX BACKGROUND (opsional)
+--------------------------------------------------- */
+.parallax-layer{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('assets/bg.webp') center/cover;
+    filter: brightness(0.4);
+    z-index: -10;
+    animation: parallaxMove 40s linear infinite;
+}
+
+@keyframes parallaxMove{
+    0%{ background-position: 0 0; }
+    100%{ background-position: 0 600px; }
+}
+
+/* ---------------------------------------------------
+   HEADER
+--------------------------------------------------- */
+.group-header{
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.group-logo{
+    width: 120px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #ff6ec7;
+}
+
+.group-name{
+    font-size: 35px;
+    margin-top: 20px;
+    color: #ff92d4;
+    text-shadow: 0 0 10px #ff6ec7;
+}
+
+.group-desc{
+    opacity: .8;
+    margin-top: 8px;
+    color: #fff;
+}
+
+.tiktok-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #ff70d6;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+    box-shadow: 0 0 20px #ff61c9;
+}
+.tiktok-btn:hover{
+    transform: scale(1.08);
+}
+
+/* ---------------------------------------------------
+   STATISTICS
+--------------------------------------------------- */
+.stats-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.stat-card{
+    width: 120px;
+    padding: 15px 0;
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 18px #ff93d9;
+    cursor: pointer;
+    transition: .3s;
+}
+.stat-card:hover{ transform: scale(1.1); }
+
+.stat-card span{
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffe3f7;
+}
+
+/* ---------------------------------------------------
+   SECTION TITLE
+--------------------------------------------------- */
+.section-title{
+    font-size: 28px;
+    text-align: center;
+    margin: 40px 0 25px;
+    color: #fff;
+    text-shadow: 0 0 10px #ff77e1;
+}
+
+/* ---------------------------------------------------
    OWNER CARD
 --------------------------------------------------- */
 .owner-box{
@@ -7,11 +140,12 @@
     margin: 0 auto;
     text-align: center;
     border-radius: 25px;
-    /* Background utama */
+    /* Background gambar + glass effect */
     background: rgba(0,0,0,0.35);
     background-image: url('Background2.jpg');
     background-size: cover;
     background-position: center;
+    backdrop-filter: blur(4px); /* efek glass */
     box-shadow: 0 0 20px #ff80df;
     cursor: pointer;
     transition: .3s;
@@ -44,11 +178,12 @@
 .admin-card{
     width: 170px;
     padding: 15px;
-    /* Background utama */
+    /* Background gambar + glass effect */
     background: rgba(0,0,0,0.35);
     background-image: url('Background2.jpg');
     background-size: cover;
     background-position: center;
+    backdrop-filter: blur(4px);
     border-radius: 22px;
     text-align: center;
     box-shadow: 0 0 15px #ff70d6;
@@ -70,4 +205,28 @@
     margin-top: 10px;
     font-weight: 600;
     color: #fff;
+}
+
+/* ---------------------------------------------------
+   FIX SEMUA TEKS BERWARNA PUTIH
+--------------------------------------------------- */
+label,
+.admin-card p,
+.owner-name,
+.popup-info p,
+.stat-card span,
+.group-desc {
+    color: #ffffff !important;
+}
+
+/* Memastikan semua teks di box tetap putih */
+.owner-box *,
+.admin-card *,
+.popup-box *,
+.popup-inner *,
+.popup-info *,
+.popup-info p,
+.popup-info b,
+.popup-info strong {
+    color: #ffffff !important;
 }
