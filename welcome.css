@@ -17,6 +17,7 @@ body {
 .container {
     text-align: center;
     padding-top: 70px;
+    color: white; /* Semua teks di container jadi putih */
 }
 
 .waifu {
@@ -56,6 +57,7 @@ button:hover {
 .credit {
     margin-top: 20px;
     opacity: 0.7;
+    color: white; /* Teks credit juga putih */
 }
 
 /* ============================
