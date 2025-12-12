@@ -100,23 +100,33 @@
     <footer class="watermark">
         © 2025 • Website Group Anime • By Tuan Mixku
     </footer>
+  
+<!-- POPUP: karakter di samping teks -->
+  <div class="popup-bg" id="popup-bg" aria-hidden="true">
+    <div class="popup-box" role="dialog" aria-modal="true">
+      <button class="popup-close" onclick="closePopup()" aria-label="Tutup popup">✕</button>
 
-
-    <!-- POPUP -->
-    <div class="popup-bg" id="popup-bg">
-        <div class="popup-box">
-            <h3 id="popup-title"></h3>
-
-            <p><b>Nama :</b> <span id="pp-nama"></span></p>
-            <p><b>Waifu/Husbu :</b> <span id="pp-waifu"></span></p>
-            <p><b>Akun TikTok :</b> <span id="pp-tt"></span></p>
-            <p><b>Status :</b> <span id="pp-status"></span></p>
-
-            <button class="close-btn" onclick="closePopup()">Tutup</button>
+      <div class="popup-inner">
+        <div class="popup-character">
+          <img id="popup-character-img" src="assets/character-placeholder.png" alt="character">
         </div>
+
+        <div class="popup-info">
+          <h3 id="popup-title"></h3>
+          <p><b>Nama :</b> <span id="pp-nama"></span></p>
+          <p><b>Waifu/Husbu :</b> <span id="pp-waifu"></span></p>
+          <p><b>Akun TikTok :</b> <span id="pp-tt"></span></p>
+          <p><b>Status :</b> <span id="pp-status"></span></p>
+        </div>
+      </div>
+
+      <div class="popup-footer">
+        <button class="close-btn" onclick="closePopup()">Tutup</button>
+      </div>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
