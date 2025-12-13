@@ -7,10 +7,21 @@ function openPopup(title, nama, waifu, tt, status, charImg) {
     document.getElementById("pp-status").innerText = status;
     document.getElementById("popup-character-img").src = charImg;
 
-    // Set link TikTok
-    document.getElementById("popup-tt-btn").href = "https://www.tiktok.com/" + tt.replace("@", "");
+       // SET LINK TIKTOK DINAMIS
+    const ttBtn = document.getElementById("popup-tt-btn");
 
-    // Tampilkan popup
+    if(tt && tt.trim() !== ""){
+        // jika username pakai @
+        if(tt.startsWith("@")){
+            ttBtn.href = "https://www.tiktok.com/" + tt;
+        } else {
+            ttBtn.href = "https://www.tiktok.com/@" + tt;
+        }
+        ttBtn.style.display = "inline-block";
+    } else {
+        ttBtn.style.display = "none";
+    }
+
     document.getElementById("popup-bg").style.display = "flex";
 }
 
