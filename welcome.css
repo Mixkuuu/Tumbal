@@ -17,9 +17,9 @@ body {
 .container {
     text-align: center;
     padding-top: 70px;
-    color: white; /* Semua teks di container jadi putih */
+    color: white;
     position: relative;
-    z-index: 1; /* pastikan muncul diatas .bg-blur */
+    z-index: 1;
 }
 
 .waifu {
@@ -38,33 +38,59 @@ p {
     opacity: 0.9;
 }
 
-/* Button */
+/* ============================
+   BUTTON (BASE STYLE)
+============================ */
 button {
     margin-top: 25px;
     padding: 18px 40px;
     border: none;
     border-radius: 20px;
-    background: #2b9fa3;
+    background: #ff2f92;
     color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.3s;
+    letter-spacing: 1px;
+    transition: 
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
 }
 
-button:hover {
-    transform: scale(1.05);
-    background: #37b6bb;
+/* ============================
+   3D + NEON GLOW PINK EFFECT
+============================ */
+.fx-push {
+    box-shadow:
+        0 6px 0 #b1005a,
+        0 0 15px rgba(255, 47, 146, 0.6);
+}
+
+.fx-push:hover {
+    transform: translateY(4px);
+    background: #ff4fa3;
+    box-shadow:
+        0 3px 0 #b1005a,
+        0 0 25px rgba(255, 47, 146, 0.9),
+        0 0 50px rgba(255, 47, 146, 0.6);
+}
+
+.fx-push:active {
+    transform: translateY(7px) scale(0.97);
+    box-shadow:
+        0 1px 0 #b1005a,
+        0 0 15px rgba(255, 47, 146, 0.8);
 }
 
 .credit {
     margin-top: 20px;
     opacity: 0.7;
-    color: white; /* Teks credit juga putih */
+    color: white;
 }
 
 /* ============================
    GLITCH TRANSITION EFFECT
-   ============================ */
+============================ */
 #glitch-screen {
     position: fixed;
     top: 0;
