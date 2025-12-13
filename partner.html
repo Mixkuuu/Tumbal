@@ -1,159 +1,46 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Partner Marga AFC</title>
-<style>
-/* ---------------------------------------------------
-GLOBAL STYLE
---------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Poppins", sans-serif;
-}
-
-body{
-  background:#0d0d0d;
-  color:white;
-}
-
-/* HEADER */
-.header-partner{
-  text-align:center;
-  padding:40px 20px;
-  color:#ff92d4;
-  font-size:32px;
-  text-shadow:0 0 15px #ff6ec7;
-}
-
-/* PARTNER LIST */
-.partner-container{
-  display:flex;
-  flex-direction:column;
-  gap:30px;
-  max-width:700px;
-  margin:0 auto 50px;
-  padding:0 20px;
-}
-
-/* CARD */
-.partner-card{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  background: rgba(255,255,255,0.1);
-  border-radius:25px;
-  box-shadow:0 0 25px #ff70d6;
-  padding:20px;
-  transition:.3s;
-}
-.partner-card:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 35px #ff61c9;
-}
-
-/* IMAGE */
-.partner-card img{
-  width:200px;
-  height:200px;
-  object-fit:cover;
-  border-radius:20px;
-  box-shadow:0 0 20px #ff92d4;
-}
-
-/* INFO */
-.partner-info{
-  margin-top:15px;
-  text-align:center;
-}
-
-.partner-info h3{
-  font-size:22px;
-  color:#ff70d6;
-  text-shadow:0 0 10px #ff61c9;
-  margin-bottom:10px;
-}
-
-.partner-info p{
-  font-size:16px;
-  margin-bottom:12px;
-}
-
-/* BUTTON */
-.partner-btn{
-  padding:12px 25px;
-  background: linear-gradient(135deg,#ff0050,#ff70d6);
-  color:white;
-  font-weight:600;
-  border:none;
-  border-radius:15px;
-  cursor:pointer;
-  text-decoration:none;
-  transition:.3s;
-}
-.partner-btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 15px #ff70d6;
-}
-
-/* FOOTER */
-.footer-partner{
-  text-align:center;
-  opacity:.6;
-  margin:30px 0;
-  color:white;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Partner Marga AFC</title>
+    
+    <!-- CSS khusus partner -->
+    <link rel="stylesheet" href="partner.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<div class="header-partner">List Partner Marga AFC</div>
+    <h1 class="partner-title">List Partner Marga AFC</h1>
 
-<!-- PARTNER LIST -->
-<div class="partner-container">
+    <div class="partner-container">
 
-  <!-- Partner A -->
-  <div class="partner-card">
-    <img src="assets/partnerA.jpg" alt="Partner A">
-    <div class="partner-info">
-      <h3>Partner A</h3>
-      <p>Deskripsi partner A, bisa ditambah info grup.</p>
-      <a href="https://chat.whatsapp.com/LinkPartnerA" target="_blank" class="partner-btn">Join Group WA</a>
+        <!-- Partner 1 -->
+        <div class="partner-card">
+            <img src="assets/partner1.jpg" alt="Partner A">
+            <div class="partner-info">
+                <h3>Partner A</h3>
+                <p>Deskripsi singkat Partner A</p>
+                <a href="https://wa.me/6281234567890" target="_blank" class="partner-btn">
+                    Bergabung ke Group WA
+                </a>
+            </div>
+        </div>
+
+        <!-- Partner 2 -->
+        <div class="partner-card">
+            <img src="assets/partner2.jpg" alt="Partner B">
+            <div class="partner-info">
+                <h3>Partner B</h3>
+                <p>Deskripsi singkat Partner B</p>
+                <a href="https://wa.me/6289876543210" target="_blank" class="partner-btn">
+                    Bergabung ke Group WA
+                </a>
+            </div>
+        </div>
+
+        <!-- Tambahkan partner lain dengan copy paste card di atas -->
+        
     </div>
-  </div>
-
-  <!-- Partner B -->
-  <div class="partner-card">
-    <img src="assets/partnerB.jpg" alt="Partner B">
-    <div class="partner-info">
-      <h3>Partner B</h3>
-      <p>Deskripsi partner B, bisa ditambah info grup.</p>
-      <a href="https://chat.whatsapp.com/LinkPartnerB" target="_blank" class="partner-btn">Join Group WA</a>
-    </div>
-  </div>
-
-  <!-- Partner C -->
-  <div class="partner-card">
-    <img src="assets/partnerC.jpg" alt="Partner C">
-    <div class="partner-info">
-      <h3>Partner C</h3>
-      <p>Deskripsi partner C, bisa ditambah info grup.</p>
-      <a href="https://chat.whatsapp.com/LinkPartnerC" target="_blank" class="partner-btn">Join Group WA</a>
-    </div>
-  </div>
-
-</div>
-
-<!-- FOOTER -->
-<div class="footer-partner">
-  © 2025 • Partner Marga AFC • By AJM STUDIO
-</div>
 
 </body>
 </html>
