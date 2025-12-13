@@ -471,3 +471,29 @@ FIX TOTAL TEKS POPUP JADI PUTIH SEMUA
 .close-btn {
     color: #ffffff !important;
 }
+
+/* ===============================
+   FIX POSISI OWNER & ADMIN
+   =============================== */
+
+.owner-main {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.owner-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* ADMIN GRID RESPONSIVE */
+.admin-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
