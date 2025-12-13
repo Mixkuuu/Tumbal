@@ -401,4 +401,21 @@ transform: scale(1.05);
 box-shadow: 0 0 12px rgba(255,0,80,0.6);
 }
 
-Nih code CSS nya
+.partner-btn-container{
+    text-align:center;
+    margin:50px 0;
+}
+
+.goto-partner-btn{
+    padding:15px 30px;
+    background: linear-gradient(135deg,#ff0050,#ff70d6);
+    color:white;
+    font-weight:600;
+    border-radius:20px;
+    text-decoration:none;
+    transition:.3s;
+}
+.goto-partner-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #ff70d6;
+}
