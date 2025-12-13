@@ -9,6 +9,25 @@ function openPopup(title, nama, waifu, tt, status, charImg){
     document.getElementById("pp-status").innerText = status;
     document.getElementById("popup-character-img").src = charImg;
 
+    // TOMBOL TIKTOK (DINAMIS PER JABATAN)
+    const ttBtn = document.getElementById("popup-tt-btn");
+
+    if(tt && tt.trim() !== ""){
+        // kalau pakai @username
+        if(tt.startsWith("@")){
+            ttBtn.href = "https://www.tiktok.com/" + tt;
+        } 
+        // kalau username tanpa @
+        else{
+            ttBtn.href = "https://www.tiktok.com/@" + tt;
+        }
+
+        ttBtn.style.display = "inline-block";
+    } else {
+        // kalau gak ada akun
+        ttBtn.style.display = "none";
+    }
+
     document.getElementById("popup-bg").style.display = "flex";
 }
 
