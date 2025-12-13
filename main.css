@@ -435,4 +435,19 @@ animation: mythicAura 3s linear infinite;
 100% { filter: blur(10px) hue-rotate(360deg); }
 }
 
-Ubah teks owner/pemilik group dan admin menjadi teks berwarna putih agar di informasi nya teks yg awalnya hitam menjadi putih
+/* ===================================================
+   FIX TEKS OWNER & ADMIN JADI PUTIH (TANPA UBAH TOMBOL)
+=================================================== */
+
+/* Nama owner */
+.owner-name,
+.owner-name.mythic {
+    color: #ffffff !important;
+}
+
+/* Nama admin 1–7 */
+.admin-card p,
+.admin-card > p,
+.epic {
+    color: #ffffff !important;
+}
