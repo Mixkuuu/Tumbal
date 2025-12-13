@@ -140,7 +140,6 @@ body {
 .owner-name{
     margin-top: 12px;
     font-weight: 600;
-    color: #fff;
 }
 
 /* ---------------------------------------------------
@@ -178,7 +177,6 @@ body {
 .admin-card p{
     margin-top: 10px;
     font-weight: 600;
-    color: #fff;
 }
 
 /* ---------------------------------------------------
@@ -234,24 +232,6 @@ body {
 .popup-info p{
     margin-top: 5px;
     font-size: 14px;
-    color: #fff;
-}
-
-/* Footer button */
-.close-btn{
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    border: none;
-    background: #ff78da;
-    color: white;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .3s;
-}
-.close-btn:hover{
-    background: #ff54cd;
 }
 
 /* ---------------------------------------------------
@@ -265,168 +245,28 @@ body {
 }
 
 /* ---------------------------------------------------
-   CLICK EFFECT
+   FIX TEXT COLOR + NEON PINK GLOW (FINAL)
 --------------------------------------------------- */
-.click-effect{
-    position: fixed;
-    width: 25px;
-    height: 25px;
-    background: url('assets/flower.png');
-    background-size: cover;
-    pointer-events: none;
-    animation: pop .8s ease-out forwards;
-}
 
-@keyframes pop{
-    0%{ transform: scale(0.2) rotate(0deg); opacity: 1; }
-    100%{ transform: scale(1.5) rotate(180deg); opacity: 0; }
-}
-
-/* ---------------------------------------------------
-   SAKURA FALL
---------------------------------------------------- */
-.sakura{
-    position: fixed;
-    top: -20px;
-    width: 22px;
-    height: 22px;
-    background: url("assets/sakura.png");
-    background-size: cover;
-    opacity: 0.9;
-    animation: sakuraFall linear infinite;
-}
-
-@keyframes sakuraFall{
-    0%{ transform: translateY(0) translateX(0); }
-    100%{ transform: translateY(120vh) translateX(40px); }
-}
-
-/* ---------------------------------------------------
-   FIX ALL TEXT COLOR ISSUE
---------------------------------------------------- */
-label,
+/* ADMIN */
 .admin-card p,
-.owner-name,
-.popup-info p,
-.stat-card span,
-.group-desc {
-    color: #ffffff !important;
-}
-
-/* ===================================================
-   RPG ROLE SYSTEM
-=================================================== */
-
-/* ======================
-   EPIC (ADMIN)
-====================== */
 .admin-card > p,
 .epic {
-    position: relative;
-    display: inline-block;
-    margin-top: 12px;
-    padding: 6px 16px;
-
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-
     color: #ffffff !important;
-
-    background: linear-gradient(
-        135deg,
-        #8e2de2,
-        #4a00e0
-    );
-
-    border-radius: 14px;
-
-    box-shadow:
-        0 0 10px rgba(142, 45, 226, 0.9),
-        0 0 25px rgba(74, 0, 224, 0.7);
-
-    opacity: 1 !important;
+    text-shadow:
+        0 0 5px #ff4fd8,
+        0 0 10px #ff4fd8,
+        0 0 20px #ff2fcf,
+        0 0 40px rgba(255, 79, 216, 0.85);
 }
 
-/* Epic glow frame */
-.admin-card > p::before,
-.epic::before {
-    content: "";
-    position: absolute;
-    inset: -3px;
-    border-radius: 16px;
-
-    background: linear-gradient(
-        45deg,
-        #c77dff,
-        #9d4edd,
-        #5a189a
-    );
-
-    z-index: -1;
-    filter: blur(7px);
-    opacity: 0.95;
-}
-
-/* Hover effect */
-.admin-card:hover > p {
-    transform: scale(1.12);
-    box-shadow:
-        0 0 18px #c77dff,
-        0 0 40px #9d4edd;
-}
-
-/* ======================
-   MYTHIC (OWNER)
-====================== */
+/* OWNER */
+.owner-name,
 .owner-name.mythic {
-    position: relative;
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 20px;
-
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 2px;
-
-    color: #ffffff;
-
-    background: linear-gradient(
-        135deg,
-        #ff512f,
-        #dd2476,
-        #ffb347
-    );
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 0 20px rgba(255, 81, 47, 1),
-        0 0 45px rgba(255, 178, 71, 0.9);
-}
-
-/* Mythic animated aura */
-.owner-name.mythic::before {
-    content: "";
-    position: absolute;
-    inset: -5px;
-    border-radius: 22px;
-
-    background: linear-gradient(
-        45deg,
-        #ff0000,
-        #ff00ff,
-        #ffaa00,
-        #ff0000
-    );
-
-    z-index: -1;
-    filter: blur(10px);
-    animation: mythicAura 3s linear infinite;
-}
-
-@keyframes mythicAura {
-    0%   { filter: blur(10px) hue-rotate(0deg); }
-    100% { filter: blur(10px) hue-rotate(360deg); }
+    color: #ffffff !important;
+    text-shadow:
+        0 0 6px #ff66e6,
+        0 0 14px #ff3fd9,
+        0 0 30px #ff1fcf,
+        0 0 55px rgba(255, 79, 216, 1);
 }
