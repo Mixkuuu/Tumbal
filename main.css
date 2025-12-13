@@ -312,3 +312,121 @@ label,
 .group-desc {
     color: #ffffff !important;
 }
+
+/* ===================================================
+   RPG ROLE SYSTEM
+=================================================== */
+
+/* ======================
+   EPIC (ADMIN)
+====================== */
+.admin-card > p,
+.epic {
+    position: relative;
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 16px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #ffffff !important;
+
+    background: linear-gradient(
+        135deg,
+        #8e2de2,
+        #4a00e0
+    );
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 10px rgba(142, 45, 226, 0.9),
+        0 0 25px rgba(74, 0, 224, 0.7);
+
+    opacity: 1 !important;
+}
+
+/* Epic glow frame */
+.admin-card > p::before,
+.epic::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 16px;
+
+    background: linear-gradient(
+        45deg,
+        #c77dff,
+        #9d4edd,
+        #5a189a
+    );
+
+    z-index: -1;
+    filter: blur(7px);
+    opacity: 0.95;
+}
+
+/* Hover effect */
+.admin-card:hover > p {
+    transform: scale(1.12);
+    box-shadow:
+        0 0 18px #c77dff,
+        0 0 40px #9d4edd;
+}
+
+/* ======================
+   MYTHIC (OWNER)
+====================== */
+.owner-name.mythic {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #ff512f,
+        #dd2476,
+        #ffb347
+    );
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 20px rgba(255, 81, 47, 1),
+        0 0 45px rgba(255, 178, 71, 0.9);
+}
+
+/* Mythic animated aura */
+.owner-name.mythic::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 22px;
+
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff00ff,
+        #ffaa00,
+        #ff0000
+    );
+
+    z-index: -1;
+    filter: blur(10px);
+    animation: mythicAura 3s linear infinite;
+}
+
+@keyframes mythicAura {
+    0%   { filter: blur(10px) hue-rotate(0deg); }
+    100% { filter: blur(10px) hue-rotate(360deg); }
+}
