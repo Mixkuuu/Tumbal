@@ -218,6 +218,7 @@ z-index: 1000;
 }
 
 .popup-box{
+  position: relative; /* penting agar tombol x bisa absolute */
 width: 90%;
 max-width: 420px;
 background: #1a1a1a;
@@ -225,7 +226,33 @@ border-radius: 25px;
 padding: 20px;
 box-shadow: 0 0 30px #ff73cf;
 animation: fadeUp .35s ease;
+z-index: 1010; /* lebih tinggi daripada popup-bg */
 }
+
+.popup-close { 
+  position: absolute; /* agar di pojok kanan atas */
+top: 50px;
+right: 15px;
+background: #ff0050;
+color: #fff;
+border: none;
+padding: 5px 12px;
+border-radius: 10ox;
+font-size: 20px;
+cursor: pointer;
+z-index: 1020px; /* pastikan bisa diklik */
+}
+
+.close-btn {
+  padding: 10px 18px;
+  background: #ff0050;
+  color: #fff;
+  borde: none;
+  border-radius: 10px:
+  cursor: pointer;
+  margin-top: 15px;
+  z-index: 1020:
+  }
 
 @keyframes fadeUp{
 from{ opacity: 0; transform: translateY(30px); }
