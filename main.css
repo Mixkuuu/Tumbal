@@ -436,18 +436,38 @@ animation: mythicAura 3s linear infinite;
 }
 
 /* ===================================================
-   FIX TEKS OWNER & ADMIN JADI PUTIH (TANPA UBAH TOMBOL)
+FIX TOTAL TEKS POPUP JADI PUTIH SEMUA
 =================================================== */
 
-/* Nama owner */
-.owner-name,
-.owner-name.mythic {
+/* Semua teks di popup */
+.popup-box,
+.popup-box * {
     color: #ffffff !important;
 }
 
-/* Nama admin 1–7 */
-.admin-card p,
-.admin-card > p,
-.epic {
+/* Judul / nama di popup */
+.popup-box h1,
+.popup-box h2,
+.popup-box h3,
+.popup-box h4,
+.popup-box h5,
+.popup-box h6 {
+    color: #ffffff !important;
+}
+
+/* Paragraf & label info */
+.popup-info p,
+.popup-info span,
+.popup-info label {
+    color: #ffffff !important;
+}
+
+/* Tombol close (X) */
+.popup-close {
+    color: #ffffff !important;
+}
+
+/* Tombol footer popup */
+.close-btn {
     color: #ffffff !important;
 }
