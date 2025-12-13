@@ -12,8 +12,8 @@ function openPopup(title, nama, waifu, tt, status, charImg) {
     const ttBtn = document.getElementById("popup-tt-btn");
 
     if(tt && tt.trim() !== ""){
-        const cleanTT = tt.replace(/^@/, "").trim(); // hapus @ dan spasi
-        ttBtn.href = "https://www.tiktok.com/@" + cleanTT;
+        // Pakai tt apa adanya (boleh ada @)
+        ttBtn.href = "https://www.tiktok.com/" + tt;
         ttBtn.style.display = "inline-block";
     } else {
         ttBtn.style.display = "none";
@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnCloseFooter = document.querySelector(".close-btn");
     const popupBg = document.getElementById("popup-bg");
 
-    // Tombol X dan Tutup
     if(btnCloseX) btnCloseX.addEventListener("click", closePopup);
     if(btnCloseFooter) btnCloseFooter.addEventListener("click", closePopup);
 
