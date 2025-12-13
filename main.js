@@ -1,7 +1,5 @@
-/* ---------------------------------------------
-   POPUP SYSTEM
---------------------------------------------- */
-function openPopup(title, nama, waifu, tt, status, charImg){
+// ===== OPEN POPUP =====
+function openPopup(title, nama, waifu, tt, status, charImg) {
     document.getElementById("popup-title").innerText = title;
     document.getElementById("pp-nama").innerText = nama;
     document.getElementById("pp-waifu").innerText = waifu;
@@ -9,50 +7,29 @@ function openPopup(title, nama, waifu, tt, status, charImg){
     document.getElementById("pp-status").innerText = status;
     document.getElementById("popup-character-img").src = charImg;
 
-    // SET LINK TIKTOK DINAMIS
-    const ttBtn = document.getElementById("popup-tt-btn");
+    // Set link TikTok
+    document.getElementById("popup-tt-btn").href = "https://www.tiktok.com/" + tt.replace("@", "");
 
-    if(tt && tt.trim() !== ""){
-        // jika username pakai @
-        if(tt.startsWith("@")){
-            ttBtn.href = "https://www.tiktok.com/" + tt;
-        } else {
-            ttBtn.href = "https://www.tiktok.com/@" + tt;
-        }
-        ttBtn.style.display = "inline-block";
-    } else {
-        ttBtn.style.display = "none";
-    }
-
+    // Tampilkan popup
     document.getElementById("popup-bg").style.display = "flex";
 }
 
-/* ---------------------------------------------
-   CLICK EFFECT (FLOWER POP)
---------------------------------------------- */
-document.addEventListener("click", function(e){
-    let flower = document.createElement("div");
-    flower.classList.add("click-effect");
-    flower.style.left = e.pageX + "px";
-    flower.style.top = e.pageY + "px";
-    document.body.appendChild(flower);
-
-    setTimeout(()=>{ flower.remove(); }, 800);
-});
-
-/* ---------------------------------------------
-   SAKURA FALL (AUTO)
---------------------------------------------- */
-function createSakura(){
-    const sakura = document.createElement("div");
-    sakura.classList.add("sakura");
-
-    sakura.style.left = Math.random() * window.innerWidth + "px";
-    sakura.style.animationDuration = (4 + Math.random() * 5) + "s";
-
-    document.getElementById("sakura-root").appendChild(sakura);
-
-    setTimeout(()=>{ sakura.remove(); }, 9000);
+// ===== CLOSE POPUP =====
+function closePopup() {
+    document.getElementById("popup-bg").style.display = "none";
 }
 
-setInterval(createSakura, 350);
+// ===== Pasang event listener tombol X & Tutup =====
+document.addEventListener("DOMContentLoaded", () => {
+    const btnCloseX = document.querySelector(".popup-close");
+    const btnCloseFooter = document.querySelector(".close-btn");
+    const popupBg = document.getElementById("popup-bg");
+
+    btnCloseX.addEventListener("click", closePopup);
+    btnCloseFooter.addEventListener("click", closePopup);
+
+    // Klik di background juga tutup popup
+    popupBg.addEventListener("click", function(e){
+        if(e.target === popupBg) closePopup();
+    });
+});
