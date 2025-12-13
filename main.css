@@ -288,3 +288,25 @@ border-radius: 18px;
 background: linear-gradient(135deg,#ff512f,#dd2476,#ffb347);
 box-shadow: 0 0 30px #ffb347;
 }
+
+/* ===================================================
+   FINAL FIX ADMIN – DESKTOP & LAPTOP
+   =================================================== */
+
+/* PAKSA AREA ADMIN MELEBAR */
+.admin-row{
+    width: 100%;
+    max-width: 1200px;   /* kunci lebar laptop */
+    margin: 40px auto;  /* center */
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 22px;
+    justify-items: center;
+}
+
+/* AMANKAN CARD */
+.admin-card{
+    width: 170px;
+    margin: 0 !important;
+}
