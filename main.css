@@ -419,3 +419,124 @@ box-shadow: 0 0 12px rgba(255,0,80,0.6);
     transform:scale(1.05);
     box-shadow:0 0 20px #ff70d6;
 }
+
+/* ===========================
+   POPUP BACKGROUND
+=========================== */
+
+#popup-bg {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* ===========================
+   POPUP BOX
+=========================== */
+
+.popup-box {
+    background: linear-gradient(145deg, #1e1e2f, #141423);
+    border-radius: 20px;
+    padding: 25px;
+    width: 90%;
+    max-width: 420px;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 97, 201, 0.35);
+
+    /* ANIMATION DEFAULT */
+    transform: scale(0.7) translateY(40px);
+    opacity: 0;
+    transition: all 0.35s ease;
+}
+
+/* SHOW STATE */
+.popup-box.popup-show {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* ===========================
+   CLOSE BUTTON (X)
+=========================== */
+
+.popup-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.popup-close:hover {
+    transform: rotate(90deg) scale(1.2);
+    color: #ff61c9;
+}
+
+/* ===========================
+   CHARACTER IMAGE
+=========================== */
+
+#popup-character-img {
+    width: 140px;
+    display: block;
+    margin: 0 auto 15px;
+    animation: floatChar 3s ease-in-out infinite;
+}
+
+@keyframes floatChar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* ===========================
+   BUTTON STYLE
+=========================== */
+
+.popup-box button,
+.popup-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ff61c9, #a855f7);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.popup-box button:hover,
+.popup-box a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 97, 201, 0.45);
+}
+
+.popup-box button:active,
+.popup-box a:active {
+    transform: scale(0.95);
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.popup-box h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.popup-box p {
+    text-align: center;
+    opacity: 0.85;
+}
