@@ -117,3 +117,25 @@ body {
     transform: translateY(0) scale(1);
     transition: all 0.7s ease;
 }
+
+/* ===========================
+   PARTNER PAGE ANIMATION
+=========================== */
+
+.partner-title,
+.partner-card {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+}
+
+.partner-title.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 0.8s ease;
+}
+
+.partner-card.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 0.7s ease;
+}
