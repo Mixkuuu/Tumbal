@@ -57,3 +57,56 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target === popupBg) closePopup();
     });
 });
+
+// ============================
+// PAGE INTRO ANIMATION (HOME)
+// ============================
+
+window.addEventListener("load", () => {
+
+    // === ELEMEN YANG AKAN DIANIMASIKAN ===
+    const introEls = document.querySelectorAll(
+        ".hero, .hero *"
+    );
+
+    const sectionTitles = document.querySelectorAll(
+        "h2, .section-title"
+    );
+
+    const cards = document.querySelectorAll(
+        ".jabatan-card, .admin-card, .va-card"
+    );
+
+    const ctaBtn = document.querySelector(
+        ".cta-btn"
+    );
+
+    // === HERO / HEADER ===
+    introEls.forEach((el, i) => {
+        setTimeout(() => {
+            el.classList.add("show");
+        }, i * 80);
+    });
+
+    // === SECTION TITLE ===
+    sectionTitles.forEach((title, i) => {
+        setTimeout(() => {
+            title.classList.add("show");
+        }, 400 + i * 150);
+    });
+
+    // === CARD JABATAN / ADMIN ===
+    cards.forEach((card, i) => {
+        setTimeout(() => {
+            card.classList.add("show");
+        }, 700 + i * 150);
+    });
+
+    // === CTA BUTTON ===
+    if (ctaBtn) {
+        setTimeout(() => {
+            ctaBtn.classList.add("show");
+        }, 1200);
+    }
+
+});
