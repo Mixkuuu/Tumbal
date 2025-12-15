@@ -45,7 +45,7 @@ body {
 /* FOTO PARTNER (FIX TIDAK TERPOTONG) */
 .partner-card img {
     width: 100%;
-    aspect-ratio: 1 / 1;   /* KOTAK */
+    aspect-ratio: 1/1;   /* KOTAK */
     object-fit: contain;  /* TIDAK TERPOTONG */
     background: rgba(0,0,0,0.4);
 }
