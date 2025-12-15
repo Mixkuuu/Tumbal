@@ -1,20 +1,20 @@
 // ============================
-// PARTNER PAGE INTRO ANIMATION
+// PARTNER PAGE LOAD ANIMATION
 // ============================
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
     const title = document.querySelector(".partner-title");
     const cards = document.querySelectorAll(".partner-card");
 
-    // Animasi judul dulu
-    setTimeout(() => {
-        if (title) title.classList.add("show");
-    }, 200);
+    // Judul muncul dulu
+    if (title) {
+        title.classList.add("show");
+    }
 
-    // Animasi card satu-satu (stagger)
+    // Card muncul satu-satu
     cards.forEach((card, index) => {
         setTimeout(() => {
             card.classList.add("show");
-        }, 400 + index * 180);
+        }, 300 + index * 200);
     });
 });
