@@ -540,3 +540,26 @@ box-shadow: 0 0 12px rgba(255,0,80,0.6);
     text-align: center;
     opacity: 0.85;
 }
+
+/* ===========================
+   PAGE LOAD ANIMATION
+=========================== */
+
+/* STATE AWAL */
+.hero *,
+.jabatan-card,
+.admin-card,
+.va-card,
+h2,
+.section-title,
+.cta-btn {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+}
+
+/* STATE AKTIF */
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 0.7s ease;
+}
