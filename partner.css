@@ -1,17 +1,18 @@
 /* ===========================
-   PARTNER UI CSS
+   PARTNER UI CSS (FIX)
 =========================== */
 
 body {
     background: url("Background 4.jpg") no-repeat center center/cover;
 }
 
+/* Title */
 .partner-title {
     text-align: center;
     font-size: 32px;
     margin: 40px 0 30px;
     color: #fff;
-    text-shadow: 0 0 15px #ff61c9, 0 0 25px #ff92d4;
+    text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff;
 }
 
 .partner-container {
@@ -26,27 +27,30 @@ body {
 .partner-card {
     width: 90%;
     max-width: 600px;
-    background: rgba(255, 20, 147, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 25px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 0 20px #ff70d6, 0 0 35px #ff92d4;
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .partner-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 25px #ff70d6, 0 0 45px #ff92d4;
+    box-shadow: 0 0 25px rgba(255,255,255,0.6);
 }
 
+/* FOTO PARTNER (FIX TIDAK TERPOTONG) */
 .partner-card img {
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+    aspect-ratio: 1 / 1;   /* KOTAK */
+    object-fit: contain;  /* TIDAK TERPOTONG */
+    background: rgba(0,0,0,0.4);
 }
 
+/* Info */
 .partner-info {
     padding: 20px;
     text-align: center;
@@ -55,8 +59,8 @@ body {
 .partner-info h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #ff61c9;
-    text-shadow: 0 0 10px #ff92d4;
+    color: #fff;
+    text-shadow: 0 0 10px #ffffff;
 }
 
 .partner-info p {
@@ -65,19 +69,20 @@ body {
     color: #fff;
 }
 
+/* Button */
 .partner-btn {
     display: inline-block;
     padding: 12px 25px;
-    background: linear-gradient(135deg, #ff0050, #ff61c9);
+    background: linear-gradient(135deg, #ff4fd8, #ff89e9);
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     border-radius: 15px;
-    box-shadow: 0 0 15px #ff70d6;
+    box-shadow: 0 0 15px rgba(255,255,255,0.4);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .partner-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #ff92d4, 0 0 30px #ff70d6;
+    box-shadow: 0 0 20px rgba(255,255,255,0.6);
 }
