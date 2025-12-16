@@ -468,7 +468,7 @@ box-shadow: 0 0 12px rgba(255,0,80,0.6);
 .popup-close {
     position: absolute;
     top: 14px;
-    right: 16px;
+    right: 16px;e
     font-size: 22px;
     cursor: pointer;
     transition: transform 0.25s ease, color 0.25s ease;
@@ -562,4 +562,39 @@ h2,
     opacity: 1;
     transform: translateY(0) scale(1);
     transition: all 0.7s ease;
+}
+
+/* ===========================
+   ANIME OPENING ANIMATION
+=========================== */
+
+/* STATE AWAL */
+.anime-init {
+    opacity: 0;
+    transform: translateY(60px) scale(0.94);
+    filter: blur(6px);
+}
+
+/* STATE MUNCUL */
+.anime-show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.8s ease;
+}
+
+/* JUDUL LEBIH DRAMATIS */
+h1.anime-show,
+h2.anime-show {
+    transition-duration: 1s;
+}
+
+/* BUTTON & CARD LEBIH HIDUP */
+a.anime-show,
+button.anime-show,
+.card.anime-show {
+    transition-duration: 0.9s;
 }
