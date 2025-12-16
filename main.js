@@ -110,3 +110,39 @@ window.addEventListener("load", () => {
     }
 
 });
+
+// ============================
+// ANIME OPENING PAGE ANIMATION
+// ============================
+
+window.addEventListener("load", () => {
+
+    // STEP 1 — SEMUA ELEMEN YANG DIANIMASIKAN
+    const openingElements = document.querySelectorAll(`
+        h1, h2, h3, h4, h5, h6,
+        p, span, small,
+        a, button,
+        img,
+        .partner-card,
+        .jabatan-card,
+        .admin-card,
+        .va-card,
+        .stat-box,
+        .badge,
+        .card,
+        .box
+    `);
+
+    // STEP 2 — SET STATE AWAL
+    openingElements.forEach(el => {
+        el.classList.add("anime-init");
+    });
+
+    // STEP 3 — PLAY OPENING (STAGGER)
+    openingElements.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add("anime-show");
+        }, 400 + index * 55);
+    });
+
+});
